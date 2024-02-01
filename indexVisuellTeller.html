@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuell Teller</title>
+    <style>
+        .tellerDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: fixed;
+            margin: 50px;
+
+        }
+
+        .nmbr {
+            padding: 10px;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tellerId" class="tellerDiv">
+        <button onclick="nmbrUp()" class="btn1">▲</button>
+        <div id="nmbrId" class="nmbr">0</div>
+        <button onclick="nmbrDown()" class="btn2">▼</button>
+
+    </div>
+
+    <script>
+        let teller = document.getElementById ("nmbrId");
+        let tall = 0;
+
+        function nmbrUp() {
+          tall +=1;
+          oppdaterNummer();
+        }
+        function nmbrDown() {
+          tall -=1;
+          oppdaterNummer();
+        }
+
+        function oppdaterNummer() {
+            teller.textContent=tall; 
+        }
+
+    </script>
+</body>
+
+</html>
