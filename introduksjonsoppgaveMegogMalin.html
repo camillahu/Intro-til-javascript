@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Boxes</title>
+
+    <style>
+        body {
+            display: flex;
+        }
+
+        .malinBox {
+            
+            width: 50%;
+            height: 300px;
+            padding-left: 5px;
+        }
+
+        .camillaBox {
+            background-color: rgb(131, 87, 189);
+            width: 50%;
+            height: 300px;
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+        
+        .camillaHobby {
+            
+        }
+        .camillaButton {
+            margin-left: 25px;
+            background-color: black; color: whitesmoke;
+            border: solid rgb(48, 11, 95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="malinBox">
+        <h2>Malin</h2>
+        <p>Jeg er 22 år og kommer fra Egersund</p>
+
+        <h4>mine hobbyer</h4>
+        <ul>
+            <li>dans</li>
+            <li>bøker</li>
+            <li>matlaging</li>
+        </ul>
+
+        <button
+        onclick="changeMalin()" 
+        style="background-color: palevioletred;">endre farge</button>
+
+        
+    </div>
+
+    <div class="camillaBox">
+    <h2>Camilla</h2>
+    <p style="font-size: larger;">Jeg er 23 år og bor i Revetal.</p>
+    
+    <div class="camillaHobby">
+        <p><u>Mine hobbyer</u></p>
+        <ul>
+            <li>Musikk</li>
+            <li>Lese bøker</li>
+            <li>Hekle</li>
+            <li>Gaming</li>
+            <li>Yoga</li>
+        </ul>
+     </div>
+     <button 
+     onclick="changeCamilla()"
+     class="camillaButton">Endre farge</button>
+</div>
+
+
+<script>
+
+function changeMalin() {
+             let malinBlob = document.getElementById(".malinBox");
+            malinBlob.style.backgroundColor = "blue";
+        
+    }
+
+    function changeCamilla() {
+        document.getElementById('')
+    }
+    
+ 
+</script>
+</body>
+
+</html
