@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .body {
+
+        }
+        #allDiv {
+            display: flex;
+
+        }
+
+        #pinkDiv {
+            color: rgb(201, 87, 154);
+            padding: 10px;
+
+        }
+
+        #yellowDiv {
+            color: rgb(248, 216, 75);
+            padding: 10px;
+        }
+
+        #blueDiv {
+            color: rgb(132, 198, 236);
+            padding: 10px;
+        }
+
+        .toggle {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="allDiv">
+        <div onclick="chooseColorP()" id="pinkDiv">Choose pink</div>
+        <div onclick="chooseColorY()" id="yellowDiv">Choose yellow</div>
+        <div onclick="chooseColorB()" id="blueDiv">Choose blue</div>
+    </div>
+    <button id="button" style="margin: 10px;">Change background color</button>
+
+    <script>
+
+        let pink = document.getElementById('pinkDiv');
+        let yellow = document.getElementById('yellowDiv');
+        let blue = document.getElementById('blueDiv');
+        const button = document.getElementById('button');
+
+        function chooseColorP() {
+           pink.classList.toggle('toggle')
+        }
+        function chooseColorY() {
+            yellow.classList.toggle('toggle')
+        }
+        function chooseColorB() {
+            blue.classList.toggle('toggle')
+        }
+
+        button.addEventListener('click', function changeColor() {
+            let body= document.body;
+
+            if (pink.classList.contains('toggle')) {
+                
+                body.style.backgroundColor = 'pink';
+            }
+            else if (yellow.classList.contains('toggle')) {
+                body.style.backgroundColor = 'yellow'
+            }
+            else if (blue.classList.contains('toggle')) {
+                body.style.backgroundColor = 'blue'
+            }
+            else {
+                body.style.backgroundColor = 'white'
+            }
+
+    } );
+
+
+
+    </script>
+
+</body>
+
+</html>
